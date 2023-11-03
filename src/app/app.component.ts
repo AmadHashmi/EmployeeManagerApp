@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './model/employee';
 import { EmployeeService } from './service/employee.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,9 @@ import { EmployeeService } from './service/employee.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  public employees: Employee[] | undefined;
   
+  public employees: Employee[] | undefined;
+  dataSource!: MatTableDataSource<Employee>;
   constructor(private employeeService: EmployeeService){
 
   }
@@ -19,10 +21,17 @@ export class AppComponent implements OnInit{
 
   public getEmployees():void{
     this.employeeService.getEmployees().subscribe((response: Employee[])=>{
-      this.employees = response
+      this.employees = response 
     },
     (error: Error)=>{
       alert(error.message);
     })
   }
+
+  addEmployee(){}
+  openEditForm(data:any){}
+
+  deleteEmployee(id:number){}
+
+  
 }

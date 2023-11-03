@@ -1,0 +1,58 @@
+.page-header {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  .centered-heading {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333; /* Adjust the color as needed */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Adjust letter spacing as needed */
+  }
+.employee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  
+  .employee-card {
+    flex: 0 0 30%;/* Adjust width for each card within a row */
+    margin: 10px;
+  }
+
+
+  .delete-button{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+
+
+  .avatar {
+    width: 60px; /* Adjust the size of the round avatar as needed */
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%; /* Create a round shape */
+    margin-right: 12px; /* Adjust spacing between the avatar and card content */
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+  .info {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  mat-icon {
+    margin-right: 8px;
+  }

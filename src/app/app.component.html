@@ -1,3 +1,36 @@
-<div *ngFor="let employee of employees">
-    <div>{{employee.name}}</div>
+<div class="page-header">
+  <h1 class="centered-heading">Friends as Employees</h1>
 </div>
+
+<div class="employee-container" style="background-color: blue;">
+  <!-- Rest of your employee card code here -->
+</div>
+
+  <div class="employee-container">
+    <div class="employee-card" *ngFor="let employee of employees">
+      <mat-card>
+        <mat-card-header>
+          <div class="avatar"><img class="avatar-image" [src]="employee.imageUrl" alt=""></div>
+          <mat-card-title>{{ employee.name }}</mat-card-title>
+          <mat-card-subtitle>{{ employee.jobTitle }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="info">
+            <mat-icon color="primary">email</mat-icon>
+            <span>{{ employee.email }}</span>
+          </div>
+          <div class="info">
+            <mat-icon color="primary">phone</mat-icon>
+            <span>{{ employee.phone }}</span>
+          </div>
+          <p>Employee Code: {{ employee.employeeCode }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary">Edit</button>
+          <button class="delete-button" mat-icon-button color="warn" ><mat-icon>delete</mat-icon></button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    
+  </div>
+  
